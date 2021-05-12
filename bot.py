@@ -31,7 +31,7 @@ class Scraper:
         chrome_options = Options()
         chrome_options.add_argument("--window-size=1920x1080")
         chrome_options.add_argument("user-data-dir=~/Library/Application Support/Google/Chrome/Default/Cookies")
-        self.driver = webdriver.Chrome("/home/badnick/Scrivania/Github/BotInstagram/SocialMoney/chromedriver", options=chrome_options)
+        self.driver = webdriver.Chrome("directory", options=chrome_options)
         print("Opening Web Window")
         self.driver.get('https://elearning.cli.unipi.it/')
         self.load_cookies()
