@@ -23,8 +23,8 @@ import pickle
 class Scraper:
     def __init__(self):
         signal(SIGINT,self.handler)
-        self.username = 'username'
-        self.password = 'password'
+        self.username = 'Username'
+        self.password = 'Password'
         #Driver setup
         # self.display = Display(visible=0, size=(800,600))
         # self.display.start()
@@ -39,7 +39,7 @@ class Scraper:
     def scrapeImages(self):
         self.driver.get('https://elearning.cli.unipi.it/course/view.php?id=2044') #link
         self.login() # Login
-        self.driver.find_element_by_xpath('//img[@src="https://elearning.cli.unipi.it/theme/image.php/boost/reservation/1616951889/icon"]').click() #Click on calendar icon
+        self.driver.find_element_by_xpath('//li[@class="activity reservation modtype_reservation "]//a').click() #Click on calendar icon
         
         direction = "right" ; NotDone = True
         
